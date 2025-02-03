@@ -1,0 +1,26 @@
+sed(for text manipulation using regex):
+    In vim using sed to copy stuff 
+	:%s/:"\(.*\)",/:"\1\1\1\1\1\2",
+    or in command line:
+	cat file.txt | sed 's/:"\(.*\)",/: "\1\1",/'
+
+jq(usually json manipulations):
+    In vim('<,'> appears after you select the part of json you want to edit):
+	:'<,'>!jq 'select(.type == "foo") | .valueSum = (.values | add) | select(.valueSum > 14)' -c	
+    Commands line:	
+	cat file.json | jq 'select(.type == "foo") | .valueSum = (.values | add) | select(.valueSum > 14)' -c
+
+exec: is faster than pipe lines, so prefer it when working with big files
+xargs: 
+    You can pipe your list of lines into the command pattern you want, like if I have some dir to remove:
+    echo "dir1\ndir2" | xargs -I {} rm -rf {}
+parallel:
+    cat parallel.test | parallel -j 4 "curl {}.com"
+    
+awk:	
+    awk can extract and manipulate and print values
+	remove dups and print: 
+		awk '!a[$0]++' file
+	sum all the process ids of vim: 
+		ps aux | grep vim | awk '{ sum += $2 } END { print sum }'
+

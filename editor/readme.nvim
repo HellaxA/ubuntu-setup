@@ -1,0 +1,10 @@
+Go to NeoVim kickstarter to see how to use it. 
+init.lua contains many comments and explanations.
+
+navigations: nvim motions basically
+
+qfix: mark code parts and quickly navigate among it
+
+harpoon: stick files to a menu, and navigate the files youre actively working on
+
+vimbegood: game for learning vim

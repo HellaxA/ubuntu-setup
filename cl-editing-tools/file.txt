@@ -1,0 +1,2 @@
+{"type":"foo","values":[1,2,3,4,5],"valueSum":15}
+{"type":"foo","values":[69,420,42,69420],"valueSum":69951}
