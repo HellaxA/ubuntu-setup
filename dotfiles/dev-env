@@ -58,6 +58,7 @@ copy_dir .config $XDG_CONFIG_HOME
 copy_dir .local $HOME/.local
 copy_file .profile $HOME
 copy_file .bashrc $HOME
+copy_file .vimrc $HOME
 
 
 

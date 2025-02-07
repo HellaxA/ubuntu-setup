@@ -124,6 +124,5 @@ alias study="cd $HOME/study"
 PS1="\[\e[32m\]\W\[\e[0m\]$ "
 export PATH="$PATH:/$HOME/.local/scripts"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-#setxkbmap -option altwin:swap_lalt_lwin
 export JAVA_HOME=/usr/lib/jvm/jdk-21
 export PATH=$JAVA_HOME/bin:$PATH
